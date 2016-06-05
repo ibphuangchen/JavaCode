@@ -59,7 +59,7 @@ class cMergeSort<T extends Comparable<T>>{
 			return;
 		new cMergeSort<T>(array, (end+start)/2, end).doSorting();
 		new cMergeSort<T>(array, start, (end+start)/2).doSorting();
-		List<T> helperArray=new ArrayList<>(array);
+		List<T> helperArray=new ArrayList<>(array); //ugly! every round you generate a new object
 		int i=start;
 		int j=(end+start)/2;
 		int idx=start;
@@ -88,6 +88,7 @@ public class Cur2 {
 		fj.invoke(new MergeSort<Double>(testArray2, 0, testArray2.size()));
 		//System.out.println(testArray2);
 		System.out.println("W/ parallel, your sorting runs for: "+Duration.between(start2, Instant.now()));
+		//W/o - about 19s, W - about 11s
 	}
 
 }
