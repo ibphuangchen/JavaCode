@@ -90,5 +90,4 @@ public class Cur2 {
 		System.out.println("W/ parallel, your sorting runs for: "+Duration.between(start2, Instant.now()));
 		//W/o - about 19s, W - about 11s
 	}
-
 }
